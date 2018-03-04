@@ -4,8 +4,8 @@
 
 .gridSquare {
   border: 1px solid grey;
-  height: 10%;
-  width: 10%;
+  height: 9%;
+  width: 9%;
   overflow: hidden;
   display: flex;
 }
@@ -19,8 +19,8 @@
 }
 
 #grid {
-  height: 500px;
-  width: 500px;
+  height: 600px;
+  width: 600px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
