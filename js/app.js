@@ -10,11 +10,12 @@ const createGrid = () =>{
 
 //create and locate hole
 const createHole = () =>{
-  
+  const $hole = $('<div>').addClass('hole').appendTo('body');
 }
 
 $(()=>{
 
   createGrid();
-
+  createHole();
+  
 });

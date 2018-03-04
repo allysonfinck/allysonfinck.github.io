@@ -10,6 +10,14 @@
   display: flex;
 }
 
+.hole {
+  border: 1px solid grey;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: black;
+}
+
 #grid {
   height: 500px;
   width: 500px;
