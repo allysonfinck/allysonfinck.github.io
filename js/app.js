@@ -1,11 +1,21 @@
 console.log('hi!');
 console.log($);
 
-//make golf course
+const gridSquares = [];
+
+//make golf course and create array of square ids
 const createGrid = () =>{
   for (let i = 1; i < 100; i++){
-  const $div = $('<div>').addClass('gridSquare').appendTo('#grid');
+  const $div = $('<div>').addClass('gridSquare').attr('id', 'square' + i).appendTo('#grid');
+  gridSquares.push(i);
   }
+}
+
+console.log(gridSquares);
+
+//find random grid square
+const randSquareId = () =>{
+  console.log('#square' + Math.floor(Math.random()*(gridSquares.length)));
 }
 
 //create and locate hole
@@ -16,6 +26,7 @@ const createHole = () =>{
 $(()=>{
 
   createGrid();
+  randSquareId();
   createHole();
-  
+
 });
