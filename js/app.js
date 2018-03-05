@@ -1,4 +1,4 @@
-console.log('hi!');
+console.log('hello');
 console.log($);
 
 const gridSquares = [];
@@ -25,21 +25,21 @@ const createBall = () =>{
   const $ball = $('<div>').addClass('ball').appendTo('body');
 }
 
-const move = () =>{
-  switch (e.which) {
-    case left:
-      $('.ball').finish().animate({
-        left: "-=50"
-      });
-      break;
-    case right:
-      $('.ball').finish().animate({
-        left: "+=50"
-      });
-    break;
-  }
-}
+  //move ball with arrow keys
+// const move = (event) =>{
+//   switch (event) {
+//     case left:
+//       $('.ball').finish().animate({left: "-=50px"}, slow)
+//       break;
+//     case right:
+//       $('.ball').finish().animate({left: "+=50px"}, slow)
+//     break;
+//   }
+// }
 
+const move = (event)=>{
+  $('.ball').animate({"left": "-=50px"});
+}
 
 $(()=>{
 
@@ -47,7 +47,7 @@ $(()=>{
   randSquare();
   createBall();
 
-  //move ball with arrow keys
+
   $(document).keydown(move);
 
 
