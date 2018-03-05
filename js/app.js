@@ -11,7 +11,7 @@ const createGrid = () =>{
   }
 }
 
-//find random grid square
+//create and locate hole
 const randSquare = () =>{
   const randSquareId = '#square' + Math.floor(Math.random()*(gridSquares.length));
   const createHole = () =>{
@@ -20,12 +20,35 @@ const randSquare = () =>{
   createHole();
 }
 
-//create and locate hole
+//append golf ball
+const createBall = () =>{
+  const $ball = $('<div>').addClass('ball').appendTo('body');
+}
+
+const move = () =>{
+  switch (e.which) {
+    case left:
+      $('.ball').finish().animate({
+        left: "-=50"
+      });
+      break;
+    case right:
+      $('.ball').finish().animate({
+        left: "+=50"
+      });
+    break;
+  }
+}
 
 
 $(()=>{
 
   createGrid();
   randSquare();
+  createBall();
+
+  //move ball with arrow keys
+  $(document).keydown(move);
+
 
 });

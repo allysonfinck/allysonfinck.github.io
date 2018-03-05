@@ -2,6 +2,12 @@
   background-color: green;
 }
 
+h1 {
+  font-family: sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+
 .gridSquare {
   border: 1px solid grey;
   height: 9%;
@@ -16,6 +22,17 @@
   height: 10px;
   width: 10px;
   background-color: black;
+  display: block;
+  margin: 20px auto;
+}
+
+.ball {
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  margin: 0 auto;
 }
 
 #grid {
@@ -25,5 +42,5 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  margin: 100px auto;
+  margin: 0 auto;
 }
