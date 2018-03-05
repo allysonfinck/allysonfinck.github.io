@@ -2,7 +2,7 @@ console.log('hello');
 console.log($);
 
 const gridSquares = [];
-
+const meter = ['#bar1', '#bar2', '#bar3', '#bar4', '#bar5', '#bar6', '#bar7', '#bar8', '#bar9', '#bar10'];
 //make golf course and create array of square ids
 const createGrid = () =>{
   for (let i = 1; i <= 100; i++){
@@ -25,12 +25,23 @@ const createBall = () =>{
   const $ball = $('<div>').addClass('ball').appendTo('#ballContainer');
 }
 
+//move ball right
 const moveRight = ()=>{
   $('.ball').animate({left: '+=57px'});
 }
 
+//move ball left
 const moveLeft = ()=>{
   $('.ball').animate({left: '-=57px'});
+}
+
+//determine strength of shot
+const increaseStrength = ()=>{
+  $('#bar1').css('box-shadow', '0px 0px 15px 5px rgba(255, 255, 190, .75)');
+    // for(i = 0; i < meter.length; i++){
+    //   console.log(meter[i]);
+    // //   $('meter[i]').css('box-shadow', '0px 0px 15px 5px rgba(255, 255, 190, .75)');
+    // }
 }
 
 $(()=>{
@@ -41,6 +52,7 @@ $(()=>{
 
   $('#rightButton').click(moveRight);
   $('#leftButton').click(moveLeft);
+  $('#strengthMeter').click(increaseStrength);
 
 
 });

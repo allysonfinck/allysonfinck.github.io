@@ -47,24 +47,28 @@ footer {
   background-color: red;
   height: 50px;
   width: 20px;
+  border: 1px solid black;
 }
 
 .yellow {
   background-color: yellow;
   height: 50px;
   width: 20px;
+  border: 1px solid black;
 }
 
 .green {
   background-color: lightgreen;
   height: 50px;
   width: 20px;
+  border: 1px solid black;
 }
 
 .orange {
   background-color: orange;
   height: 50px;
   width: 20px;
+  border: 1px solid black;
 }
 
 #grid {
@@ -78,12 +82,12 @@ footer {
 }
 
 #ballContainer {
-  margin-bottom: 20px;
   width: 600px;
   margin:0 auto;
 }
 
 #leftButton {
+  margin-top: 20px;
   border: 1px solid gold;
   width: 100px;
   height: 100px;
@@ -93,6 +97,7 @@ footer {
 }
 
 #rightButton {
+  margin-top: 20px;
   border: 1px solid gold;
   width: 100px;
   height: 100px;
@@ -102,7 +107,7 @@ footer {
 }
 
 #strengthMeter {
-  border: 1px solid yellow;
+  border: 1px solid black;
   width: 200px;
   height: 50px;
   margin-top: 25px;
