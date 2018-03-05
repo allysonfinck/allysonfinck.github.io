@@ -26,11 +26,11 @@ const createBall = () =>{
 }
 
 const moveRight = ()=>{
-  $('.ball').animate({left: '+=55px'});
+  $('.ball').animate({left: '+=57px'});
 }
 
 const moveLeft = ()=>{
-  $('.ball').animate({left: '-=55px'});
+  $('.ball').animate({left: '-=57px'});
 }
 
 $(()=>{
