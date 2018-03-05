@@ -22,23 +22,15 @@ const randSquare = () =>{
 
 //append golf ball
 const createBall = () =>{
-  const $ball = $('<div>').addClass('ball').appendTo('body');
+  const $ball = $('<div>').addClass('ball').appendTo('#ballContainer');
 }
 
-  //move ball with arrow keys
-// const move = (event) =>{
-//   switch (event) {
-//     case left:
-//       $('.ball').finish().animate({left: "-=50px"}, slow)
-//       break;
-//     case right:
-//       $('.ball').finish().animate({left: "+=50px"}, slow)
-//     break;
-//   }
-// }
+const moveRight = ()=>{
+  $('.ball').animate({left: '+=55px'});
+}
 
-const move = (event)=>{
-  $('.ball').animate({"left": "-=50px"});
+const moveLeft = ()=>{
+  $('.ball').animate({left: '-=55px'});
 }
 
 $(()=>{
@@ -47,8 +39,8 @@ $(()=>{
   randSquare();
   createBall();
 
-
-  $(document).keydown(move);
+  $('#rightButton').click(moveRight);
+  $('#leftButton').click(moveLeft);
 
 
 });

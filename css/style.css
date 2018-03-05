@@ -8,10 +8,17 @@ h1 {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
 .gridSquare {
   border: 1px solid grey;
-  height: 9%;
-  width: 9%;
+  height: 55px;
+  width: 55px;
   overflow: hidden;
   display: flex;
 }
@@ -33,6 +40,7 @@ h1 {
   height: 10px;
   width: 10px;
   margin: 0 auto;
+  position: relative;
 }
 
 #grid {
@@ -43,4 +51,22 @@ h1 {
   align-content: center;
   justify-content: center;
   margin: 0 auto;
+}
+
+#leftButton {
+  border: 1px solid gold;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  background-image: url('http://www.pngmart.com/files/3/Left-Arrow-PNG-HD.png');
+  background-color: #cccccc;
+}
+
+#rightButton {
+  border: 1px solid gold;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  background-image: url('http://catskillny.org/wp-content/uploads/2017/05/redarrow-right.png');
+  background-color: #cccccc;
 }
