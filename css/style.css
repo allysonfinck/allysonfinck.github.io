@@ -21,12 +21,20 @@ a {
   color: orange;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .gridSquare {
-  /* border: 1px solid grey; */
+  border: 1px solid grey;
   height: 55px;
   width: 55px;
   overflow: hidden;
   display: flex;
+  posiiton: absolute;
+  z-index: 2;
 }
 
 .hole {
@@ -37,6 +45,7 @@ a {
   background-color: black;
   display: block;
   margin: 20px 0;
+  z-index: 3;
 }
 
 .ball {
@@ -46,7 +55,9 @@ a {
   height: 10px;
   width: 10px;
   margin: 0 auto;
+  display: flex;
   position: relative;
+  z-index: 4;
 }
 
 .red {
@@ -85,11 +96,7 @@ a {
   align-content: center;
   justify-content: center;
   margin: 0 auto;
-}
-
-#ballContainer {
-  width: 600px;
-  margin:0 auto;
+  z-index: 1;
 }
 
 #leftButton {

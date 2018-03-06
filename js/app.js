@@ -23,7 +23,7 @@ const randSquare = () =>{
 
 //append golf ball
 const createBall = () =>{
-  const $ball = $('<div>').addClass('ball').appendTo('#ballContainer');
+  const $ball = $('<div>').addClass('ball').appendTo('.container');
 }
 
 //move ball right
@@ -41,6 +41,30 @@ const increaseStrength = (event)=>{
   $(event.target).css('box-shadow', '0px 0px 15px 5px rgba(255, 255, 190, .75)');
 }
 
+const hitBall = ()=>{
+  if ($('#bar1').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-50px'});
+  } else if ($('#bar2').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-105px'});
+  } else if ($('#bar3').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-165px'});
+  } else if ($('#bar4').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-220px'});
+  } else if ($('#bar5').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-280px'});
+  } else if ($('#bar6').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-335px'});
+  } else if ($('#bar7').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-390px'});
+  } else if ($('#bar8').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-450px'});
+  } else if ($('#bar9').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-505px'});
+  } else if ($('#bar10').css('box-shadow') !== 'none'){
+    $('.ball').animate({top: '-560px'});
+  }
+}
+
 $(()=>{
 
   createGrid();
@@ -50,6 +74,7 @@ $(()=>{
   $('#rightButton').click(moveRight);
   $('#leftButton').click(moveLeft);
   $('#strengthMeter').click(increaseStrength);
+  $('.ball').click(hitBall);
 
 
 });
