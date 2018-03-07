@@ -9,7 +9,7 @@ const closeModal = ()=>{
 }
 
 const gridSquares = [];
-// const meter = ['#bar1', '#bar2', '#bar3', '#bar4', '#bar5', '#bar6', '#bar7', '#bar8', '#bar9', '#bar10'];
+const meter = ['#bar1', '#bar2', '#bar3', '#bar4', '#bar5', '#bar6', '#bar7', '#bar8', '#bar9', '#bar10'];
 
 //make golf course and create array of square ids
 const createGrid = () =>{
@@ -62,8 +62,10 @@ const checkWin = () =>{
       $holeLoc.left+7 >= $ballLoc.left
     ) {
       console.log('win');
+      restart();
     } else {
       console.log('lose');
+      restart();
     }
 }
 
@@ -71,39 +73,60 @@ const checkWin = () =>{
 const hitBall = ()=>{
   if ($('#bar1').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-50px'}, 'slow');
-
   } else if ($('#bar2').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-114px'}, 'slow');
-
   } else if ($('#bar3').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-165px'}, 'slow');
-
   } else if ($('#bar4').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-220px'}, 'slow');
-
   } else if ($('#bar5').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-280px'}, 'slow');
-
   } else if ($('#bar6').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-335px'}, 'slow');
-
   } else if ($('#bar7').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-390px'}, 'slow');
-
   } else if ($('#bar8').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-451px'}, 'slow');
-
   } else if ($('#bar9').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-505px'}, 'slow');
-
   } else if ($('#bar10').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-560px'}, 'slow');
-
   }
-  setTimeout(checkWin, 2000);
+  setTimeout(checkWin, 1000);
 }
 
+//start new round
+const restart = () =>{
+  $('.ball').remove();
+  $('.hole').remove();
 
+  if ($('#bar1').css('box-shadow') !== 'none'){
+    $('#bar1').css('box-shadow', 'none');
+  } else if ($('#bar2').css('box-shadow') !== 'none'){
+    $('#bar2').css('box-shadow', 'none');
+  } else if ($('#bar3').css('box-shadow') !== 'none'){
+    $('#bar3').css('box-shadow', 'none');
+  } else if ($('#bar4').css('box-shadow') !== 'none'){
+    $('#bar4').css('box-shadow', 'none');
+  } else if ($('#bar5').css('box-shadow') !== 'none'){
+    $('#bar5').css('box-shadow', 'none');
+  } else if ($('#bar6').css('box-shadow') !== 'none'){
+    $('#bar6').css('box-shadow', 'none');
+  } else if ($('#bar7').css('box-shadow') !== 'none'){
+    $('#bar7').css('box-shadow', 'none');
+  } else if ($('#bar8').css('box-shadow') !== 'none'){
+    $('#bar8').css('box-shadow', 'none');
+  } else if ($('#bar9').css('box-shadow') !== 'none'){
+    $('#bar9').css('box-shadow', 'none');
+  } else if ($('#bar10').css('box-shadow') !== 'none'){
+    $('#bar10').css('box-shadow', 'none');
+  }
+
+  randSquare();
+  createBall();
+
+  $('.ball').click(hitBall);
+}
 
 
 $(()=>{
@@ -122,8 +145,3 @@ $(()=>{
 
 
 });
-
-const testFunction = () =>{
-  console.log($('.ball').offset());
-  console.log($('.hole').offset());
-}
