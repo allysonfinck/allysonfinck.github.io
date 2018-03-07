@@ -92,6 +92,16 @@ a {
   border: 1px solid black;
 }
 
+#stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+
+#stats h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 #grid {
   border: 1px solid darkgreen;
   height: 600px;

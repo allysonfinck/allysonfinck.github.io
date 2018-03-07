@@ -10,6 +10,9 @@ const closeModal = ()=>{
 
 const gridSquares = [];
 const meter = ['#bar1', '#bar2', '#bar3', '#bar4', '#bar5', '#bar6', '#bar7', '#bar8', '#bar9', '#bar10'];
+let roundCount = 1;
+let winCount = 0;
+let loseCount = 0;
 
 //make golf course and create array of square ids
 const createGrid = () =>{
@@ -48,6 +51,12 @@ const increaseStrength = (event)=>{
   $(event.target).css('box-shadow', '0px 0px 15px 5px rgba(255, 255, 190, .75)');
 }
 
+//increase round
+// const increaseRound = () =>{
+//
+//
+// }
+
 //check locations
 const checkWin = () =>{
   const $ballLoc = $('.ball').offset();
@@ -63,9 +72,13 @@ const checkWin = () =>{
     ) {
       console.log('win');
       restart();
+      $('.roundNum').html('Round: ' + ++roundCount);
+      $('.winNum').html('Wins: ' + ++winCount);
     } else {
       console.log('lose');
       restart();
+      $('.roundNum').html('Round: ' + ++roundCount);
+      $('.loseNum').html('Losses: ' + ++loseCount);
     }
 }
 
