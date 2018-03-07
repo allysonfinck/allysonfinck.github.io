@@ -1,6 +1,15 @@
 console.log('hello');
 console.log($);
 
+//modal commands
+const openModal = ()=>{
+  $('#modal').css('display', 'block');
+}
+
+const closeModal = ()=>{
+  $('#modal').css('display', 'none');
+}
+
 const gridSquares = [];
 // const meter = ['#bar1', '#bar2', '#bar3', '#bar4', '#bar5', '#bar6', '#bar7', '#bar8', '#bar9', '#bar10'];
 
@@ -41,6 +50,7 @@ const increaseStrength = (event)=>{
   $(event.target).css('box-shadow', '0px 0px 15px 5px rgba(255, 255, 190, .75)');
 }
 
+//hitting ball according to strength meter
 const hitBall = ()=>{
   if ($('#bar1').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-50px'}, 'slow');
@@ -71,6 +81,8 @@ $(()=>{
   randSquare();
   createBall();
 
+  $('#openModal').click(openModal);
+  $('#close').click(closeModal);
   $('#rightButton').click(moveRight);
   $('#leftButton').click(moveLeft);
   $('#strengthMeter').click(increaseStrength);

@@ -1,22 +1,24 @@
-* {
+body {
   background-color: green;
 }
 
 h1 {
-  font-family: sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
   font-size: 60px;
   text-align: center;
   margin-top: 20px;
 }
 
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
+button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: lightgreen;
 }
 
 a {
+  font-family: 'Gloria Hallelujah', cursive;
   text-decoration: none;
   color: orange;
 }
@@ -89,6 +91,7 @@ a {
 }
 
 #grid {
+  border: 1px solid darkgreen;
   height: 600px;
   width: 600px;
   display: flex;
@@ -99,6 +102,7 @@ a {
   z-index: 1;
 }
 
+/* Control Bar */
 #leftButton {
   margin-top: 20px;
   /* border: 1px solid gold; */
@@ -115,8 +119,8 @@ a {
   width: 100px;
   height: 100px;
   display: flex;
-  background-image: url('http://catskillny.org/wp-content/uploads/2017/05/redarrow-right.png');
-  background-color: #cccccc;
+  background: #cccccc url('images/right-arrow.png');
+
 }
 
 #strengthMeter {
@@ -129,6 +133,52 @@ a {
 }
 
 #rights {
+  font-family: 'Gloria Hallelujah', cursive;
   text-align: center;
   margin-top: 30px;
+}
+
+#control-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Modal Properties */
+#modal {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  overflow: auto;
+  display: none;
+}
+
+#modal-textbox {
+  background-color: lightgreen;
+  height: 350px;
+  width: 550px;
+  border-radius: 2px;
+  margin: 150px auto;
+  padding: 20px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+}
+
+#modal-textbox h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+#modal-textbox p {
+  font-family: 'Gloria Hallelujah', cursive;
+  line-height: 30px;
+}
+
+#close {
+  display: block;
+  margin: 0 auto;
 }

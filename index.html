@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -12,12 +13,20 @@
   </head>
   <body>
     <h1>Putt Putt Golf</h1>
+    <button id="openModal">Instructions</button>
+    <div id="modal">
+      <div id="modal-textbox">
+        <h1>How to Play Browser Golf</h1>
+        <p>Each round will begin with your golf ball in the back and center of the green. Line up your ball with the hole by clicking the arrows below, and determine the strength of your swing by the meter. Click on the ball to swing! Beat 9 rounds to claim your spot as the new Putt Putt Champion!</p>
+        <a id="close" href="#">Close</a>
+      </div>
+    </div>
     <!-- this is the golf course -->
     <div class="container">
       <div id="grid">
       </div>
     </div>
-    <footer>
+    <div id="control-bar">
       <div id="leftButton"></div>
       <div id="strengthMeter">
         <div class="green" id="bar1"></div>
@@ -32,7 +41,9 @@
         <div class="red" id="bar10"></div>
       </div>
       <div id="rightButton"></div>
+    </div>
+    <footer>
+      <div id="rights">Made with &hearts; by <a href="https://github.com/allysonfinck">Allyson Finck</a></div>
     </footer>
   </body>
-    <div id="rights">Made with &hearts; by <a href="https://github.com/allysonfinck">Allyson Finck</a></div>
 </html>
