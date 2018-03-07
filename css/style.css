@@ -194,3 +194,31 @@ a {
   display: block;
   margin: 0 auto;
 }
+
+#winModal {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  overflow: auto;
+  /* display: none; */
+}
+
+#winModal-textbox {
+  background-color: lightgreen;
+  height: 350px;
+  width: 550px;
+  border-radius: 2px;
+  margin: 150px auto;
+  padding: 20px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+}
+
+#winModal-textbox h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 50px;
+  line-height: 60px;
+}

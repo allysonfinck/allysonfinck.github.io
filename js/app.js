@@ -65,20 +65,32 @@ const checkWin = () =>{
   console.log($('#square71').offset());
   console.log($holeLoc);
   console.log($ballLoc);
-  if ($holeLoc.top-7 <= $ballLoc.top &&
-      $holeLoc.top+7 >= $ballLoc.top &&
-      $holeLoc.left-7 <= $ballLoc.left &&
-      $holeLoc.left+7 >= $ballLoc.left
+  if ($holeLoc.top-10 <= $ballLoc.top &&
+      $holeLoc.top+10 >= $ballLoc.top &&
+      $holeLoc.left-10 <= $ballLoc.left &&
+      $holeLoc.left+10 >= $ballLoc.left
     ) {
       console.log('win');
-      restart();
       $('.roundNum').html('Round: ' + ++roundCount);
       $('.winNum').html('Wins: ' + ++winCount);
+      if (roundCount === 10 && winCount === 9){
+        const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
+        const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>You are the Putt Putt Champion!</h1>');
+      } else if (roundCount === 10 && winCount !== 9){
+        const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
+        const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>Better luck next time!</h1>');
+      } else {restart();}
     } else {
       console.log('lose');
-      restart();
       $('.roundNum').html('Round: ' + ++roundCount);
       $('.loseNum').html('Losses: ' + ++loseCount);
+      if (roundCount === 10 && winCount == 9){
+        const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
+        const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>You are the Putt Putt Champion!</h1>');
+      } else if (roundCount === 10 && winCount !== 9){
+        const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
+        const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>Better luck next time!</h1>');
+      } else {restart();}
     }
 }
 
@@ -87,7 +99,7 @@ const hitBall = ()=>{
   if ($('#bar1').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-50px'}, 'slow');
   } else if ($('#bar2').css('box-shadow') !== 'none'){
-    $('.ball').animate({top: '-114px'}, 'slow');
+    $('.ball').animate({top: '-110px'}, 'slow');
   } else if ($('#bar3').css('box-shadow') !== 'none'){
     $('.ball').animate({top: '-165px'}, 'slow');
   } else if ($('#bar4').css('box-shadow') !== 'none'){
