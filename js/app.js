@@ -35,12 +35,12 @@ const createBall = () =>{
 
 //move ball right
 const moveRight = ()=>{
-  $('.ball').animate({left: '+=57.5px'});
+  $('.ball').animate({left: '+=57px'});
 }
 
 //move ball left
 const moveLeft = ()=>{
-  $('.ball').animate({left: '-=57.5px'});
+  $('.ball').animate({left: '-=57px'});
 }
 
 //determine strength of shot
@@ -52,12 +52,14 @@ const increaseStrength = (event)=>{
 const checkWin = () =>{
   const $ballLoc = $('.ball').offset();
   const $holeLoc = $('.hole').offset();
+  console.log($('.container').offset());
+  console.log($('#square71').offset());
   console.log($holeLoc);
   console.log($ballLoc);
-  if ($holeLoc.top-5 <= $ballLoc.top &&
-      $holeLoc.top+5 >= $ballLoc.top &&
-      $holeLoc.left-5 <= $ballLoc.left &&
-      $holeLoc.left+5 >= $ballLoc.left
+  if ($holeLoc.top-7 <= $ballLoc.top &&
+      $holeLoc.top+7 >= $ballLoc.top &&
+      $holeLoc.left-7 <= $ballLoc.left &&
+      $holeLoc.left+7 >= $ballLoc.left
     ) {
       console.log('win');
     } else {
@@ -95,10 +97,10 @@ const hitBall = ()=>{
     $('.ball').animate({top: '-505px'}, 'slow');
 
   } else if ($('#bar10').css('box-shadow') !== 'none'){
-    $('.ball').animate({top: '-575px'}, 'slow');
+    $('.ball').animate({top: '-560px'}, 'slow');
 
   }
-  checkWin();
+  setTimeout(checkWin, 2000);
 }
 
 
@@ -120,3 +122,8 @@ $(()=>{
 
 
 });
+
+const testFunction = () =>{
+  console.log($('.ball').offset());
+  console.log($('.hole').offset());
+}
