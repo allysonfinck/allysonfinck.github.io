@@ -209,8 +209,8 @@ a {
 
 #winModal-textbox {
   background-color: lightgreen;
-  height: 350px;
-  width: 550px;
+  height: 500px;
+  width: 500px;
   border-radius: 2px;
   margin: 150px auto;
   padding: 20px;
@@ -230,4 +230,11 @@ a {
   font-family: 'Gloria Hallelujah', cursive;
   background-color: darkgreen;
   color: white;
+}
+
+#winModal-textbox img {
+  display: block;
+  margin: 10px auto;
+  height: 50%;
+  width: 70%;
 }

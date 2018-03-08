@@ -74,12 +74,14 @@ const checkWin = () =>{
       if (roundCount === 10 && winCount === 9){
         const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
         const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>You are the Putt Putt Champion!</h1>');
+        const $winImg = $('<img>').attr('src', 'https://i.ytimg.com/vi/xCK1wvdZdHA/maxresdefault.jpg').appendTo('#winModal-textbox');
         const resetBtn = $('<input type="button" value="Restart"/>');
         $(resetBtn).attr('id', 'resetButton').appendTo($winModaltext);
         $(resetBtn).click(refresh);
       } else if (roundCount === 10 && winCount !== 9){
         const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
         const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>Better luck next time!</h1>');
+        const $loseImg = $('<img>').attr('src', 'https://latest.com/wp-content/uploads/2017/10/Screen-Shot-2017-10-05-at-8.32.35-AM.png').appendTo('#winModal-textbox');
         const resetBtn = $('<input type="button" value="Restart"/>');
         $(resetBtn).attr('id', 'resetButton').appendTo($winModaltext);
         $(resetBtn).click(refresh);
@@ -94,6 +96,7 @@ const checkWin = () =>{
       } else if (roundCount === 10 && winCount !== 9){
         const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
         const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>Better luck next time!</h1>');
+        const $loseImg = $('<img>').attr('src', 'https://latest.com/wp-content/uploads/2017/10/Screen-Shot-2017-10-05-at-8.32.35-AM.png').css('margin', '0 auto').appendTo('#winModal-textbox');
         const resetBtn = $('<input type="button" value="Restart"/>');
         $(resetBtn).attr('id', 'resetButton').appendTo($winModaltext);
         $(resetBtn).click(refresh);
