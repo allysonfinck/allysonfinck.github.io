@@ -51,13 +51,11 @@ const increaseStrength = (event)=>{
   $(event.target).css('box-shadow', '0px 0px 15px 5px rgba(255, 255, 190, .75)');
 }
 
-//increase round
-// const increaseRound = () =>{
-//
-//
-// }
+const refresh = ()=>{
+  location.reload(true);
+}
 
-//check locations
+//check locations and wins
 const checkWin = () =>{
   const $ballLoc = $('.ball').offset();
   const $holeLoc = $('.hole').offset();
@@ -76,9 +74,15 @@ const checkWin = () =>{
       if (roundCount === 10 && winCount === 9){
         const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
         const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>You are the Putt Putt Champion!</h1>');
+        const resetBtn = $('<input type="button" value="Restart"/>');
+        $(resetBtn).attr('id', 'resetButton').appendTo($winModaltext);
+        $(resetBtn).click(refresh);
       } else if (roundCount === 10 && winCount !== 9){
         const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
         const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>Better luck next time!</h1>');
+        const resetBtn = $('<input type="button" value="Restart"/>');
+        $(resetBtn).attr('id', 'resetButton').appendTo($winModaltext);
+        $(resetBtn).click(refresh);
       } else {restart();}
     } else {
       console.log('lose');
@@ -90,6 +94,9 @@ const checkWin = () =>{
       } else if (roundCount === 10 && winCount !== 9){
         const $winModal = $('<div>').attr('id', 'winModal').appendTo('body');
         const $winModaltext = $('<div>').attr('id', 'winModal-textbox').appendTo($winModal).html('<h1>Better luck next time!</h1>');
+        const resetBtn = $('<input type="button" value="Restart"/>');
+        $(resetBtn).attr('id', 'resetButton').appendTo($winModaltext);
+        $(resetBtn).click(refresh);
       } else {restart();}
     }
 }
