@@ -15,7 +15,7 @@
 
 -----------
 
-[Imgur](https://i.imgur.com/JkL24Cw.png)
+![Imgur](https://i.imgur.com/JkL24Cw.png)
 
 --------------
 
