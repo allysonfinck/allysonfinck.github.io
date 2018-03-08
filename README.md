@@ -1,1 +1,1 @@
-# golf-game
+# Golf Game
