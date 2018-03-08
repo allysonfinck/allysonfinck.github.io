@@ -117,22 +117,19 @@ a {
 /* Control Bar */
 #leftButton {
   margin-top: 20px;
-  /* border: 1px solid gold; */
-  width: 100px;
-  height: 100px;
-  display: flex;
-  background-image: url('http://www.pngmart.com/files/3/Left-Arrow-PNG-HD.png');
-  background-color: #cccccc;
+  width: 120px;
+  height: 120px;
+  background-image: url('https://icons8.com/iconizer/files/DefaultIcon_ver_0.11/thumb/128/arrow-alt-left.png');
+  background-repeat: no-repeat;
 }
+
+
 
 #rightButton {
   margin-top: 20px;
-  /* border: 1px solid gold; */
-  width: 100px;
-  height: 100px;
-  display: flex;
-  background: #cccccc url('images/right-arrow.png');
-
+  width: 120px;
+  height: 120px;
+  background-image: url('https://icons8.com/iconizer/files/DefaultIcon_ver_0.11/thumb/128/arrow-alt-right.png');
 }
 
 #strengthMeter {
