@@ -14,8 +14,9 @@
 #### Arrow keys move the ball back and forth to align with the hole. selecting a block along the strength meter will determine the distance the ball is hit. Click on the ball to swing!
 
 -----------
-https://imgur.com/JkL24Cw
-!(https://i.imgur.com/JkL24Cw.png)
+
+[Imgur](https://i.imgur.com/JkL24Cw.png)
+
 --------------
 
 ### Languages
