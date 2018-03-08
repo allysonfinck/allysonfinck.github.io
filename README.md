@@ -1,6 +1,5 @@
 # Golf Game
 
--------------------------
 
 ### About
 
@@ -15,7 +14,7 @@
 #### Arrow keys move the ball back and forth to align with the hole. selecting a block along the strength meter will determine the distance the ball is hit. Click on the ball to swing!
 
 -----------
-![alt text](https://imgur.com/JkL24Cw)
+https://imgur.com/JkL24Cw
 --------------
 
 ### Languages
