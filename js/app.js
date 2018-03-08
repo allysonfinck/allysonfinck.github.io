@@ -63,8 +63,8 @@ const checkWin = () =>{
   console.log($('#square71').offset());
   console.log($holeLoc);
   console.log($ballLoc);
-  if ($holeLoc.top-10 <= $ballLoc.top &&
-      $holeLoc.top+10 >= $ballLoc.top &&
+  if ($holeLoc.top-15 <= $ballLoc.top &&
+      $holeLoc.top+15 >= $ballLoc.top &&
       $holeLoc.left-10 <= $ballLoc.left &&
       $holeLoc.left+10 >= $ballLoc.left
     ) {
